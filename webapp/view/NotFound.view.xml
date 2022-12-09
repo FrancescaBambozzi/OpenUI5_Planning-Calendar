@@ -1,0 +1,3 @@
+<mvc:View controllerName="movies.controller.NotFound" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" displayBlock="true" height="100%" busyIndicatorDelay="0">
+    <MessagePage title="{i18n>notFoundTitle}" text="{i18n>notFoundText}" icon="sap-icon://video" description="{i18n>notFoundDescription}" showNavButton="true" navButtonPress=".onNavBack" />
+</mvc:View>
