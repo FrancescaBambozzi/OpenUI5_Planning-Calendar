@@ -1,11 +1,11 @@
 <mvc:View controllerName="movies.controller.App" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:unified="sap.ui.unified" xmlns:f="sap.ui.layout.form" displayBlock="true" height="100%" busyIndicatorDelay="0">
-    <Page id="page" title="{i18n>title}">
+    <Page id="page" showHeader="false">
         <content>
-            <Image id="headerPic" tooltip="{i18n>imageTooltip}" alt="header pic" visible="{= !${device>/system/phone} }" height="17rem" mode="Image" src="images/png.png" width="100%" press="sap.m.MessageToast.show(${i18n>messageToast})" />
+            <Image id="headerPic" tooltip="{i18n>imageTooltip}" alt="header pic" visible="{= !${device>/system/phone} }" mode="Image" src="images/header.jpg" width="100%" press="sap.m.MessageToast.show(${i18n>messageToast})" />
             <!-- Simple Form  -->
-            <f:SimpleForm id="form" editable="true" layout="ColumnLayout" width="" title="{i18n>titleForm}">
+            <f:SimpleForm id="form" editable="true" layout="ResponsiveGridLayout" width="100%" title="{i18n>titleForm}" class="formCSS">
                 <f:content>
-                    <Label text="{i18n>labelCity}" labelFor="city" />
+                    <Label text="{i18n>labelCity}" labelFor="city"/>
                     <SearchField id="city" showSearchButton="false" placeholder="{i18n>cityPlaceholder}" />
                     <Label text="{i18n>labelGenre}" labelFor="genre" />
                     <Select id="genre">
@@ -15,15 +15,13 @@
                         <core:ListItem icon="sap-icon://paper-plane" key="{i18n>genreScienceFiction}" text="Science Fiction" />
                     </Select>
                     <Label />
-                    <Button text="{i18n>buttonMovieSearch}" class="sapUiMediumMarginTop" type="Emphasized" press=".onPress('for movies!')" />
+                    <Button text="{i18n>buttonMovieSearch}" class="sapUiSmallMarginTop button" type="Unstyled" press=".onPress('for movies!')" />
                 </f:content>
-                <f:title />
-                <f:toolbar />
             </f:SimpleForm>
             <!-- Calendar -->
             <PlanningCalendar id="calendar" startDate="{path: 'movies>/initDate', formatter: '.formatter.formatDate'}" rows="{movies>/movies}" appointmentsVisualization="Filled" appointmentSelect=".onAppointmentSelect(${$parameters>/appointment})">
                 <toolbarContent>
-                    <Title text="{i18n>calendarTitle}" titleStyle="H3" />
+                    <Title text="{i18n>calendarTitle}" titleStyle="H2" />
                 </toolbarContent>
                 <rows>
                     <PlanningCalendarRow title="{movies>name}" text="{movies>genre}" appointments="{path: 'movies>appointments', templateShareable: 'true'}">
@@ -37,9 +35,9 @@
             </PlanningCalendar>
         </content>
         <footer>
-            <Toolbar id="toolbar" width="100%">
+            <Toolbar id="toolbar" width="100%" style="Clear" class="footerToolbar">
                 <content>
-                    <Link id="link" href="https://www.imdb.com/" rel="" target="_blank" text="{i18n>footerLink}" width="" />
+                    <Link id="link" href="https://www.imdb.com/" target="_blank" text="{i18n>footerLink}" class=".sapMLnk:visited"/>
                 </content>
             </Toolbar>
         </footer>

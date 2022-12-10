@@ -1,7 +1,7 @@
 <mvc:View controllerName="movies.controller.App" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
-    <App id="app">
-        <pages>
-           
-        </pages>
-    </App>
+    <Shell backgroundImage="images/cin2.jpg" headerRightText="">
+            <App id="app">
+                <pages />
+            </App>
+    </Shell>
 </mvc:View>
