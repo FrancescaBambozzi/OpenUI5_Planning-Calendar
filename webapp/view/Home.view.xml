@@ -3,7 +3,7 @@
         <content>
             <Image id="headerPic" tooltip="{i18n>imageTooltip}" alt="header pic" visible="{= !${device>/system/phone} }" mode="Image" src="images/header.jpg" width="100%" press="sap.m.MessageToast.show(${i18n>messageToast})" />
             <!-- Simple Form  -->
-            <f:SimpleForm id="form" editable="true" layout="ResponsiveGridLayout" width="100%" title="{i18n>titleForm}" class="formCSS">
+            <f:SimpleForm id="form" editable="true" layout="ResponsiveGridLayout" width="100%" title="{i18n>titleForm}">
                 <f:content>
                     <Label text="{i18n>labelCity}" labelFor="city"/>
                     <SearchField id="city" showSearchButton="false" placeholder="{i18n>cityPlaceholder}" />
@@ -37,7 +37,7 @@
         <footer>
             <Toolbar id="toolbar" width="100%" style="Clear" class="footerToolbar">
                 <content>
-                    <Link id="link" href="https://www.imdb.com/" target="_blank" text="{i18n>footerLink}" class=".sapMLnk:visited"/>
+                    <Link id="link" href="https://www.imdb.com/" target="_blank" text="{i18n>footerLink}"/>
                 </content>
             </Toolbar>
         </footer>
