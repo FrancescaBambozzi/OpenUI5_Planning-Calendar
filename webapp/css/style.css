@@ -17,7 +17,7 @@
     justify-content: center;
 }
 
-/* Since are predefined sap css classes no need to add reference in xml view */
+/* predefined sap css classes  */
 .sapMLnk:visited {
     color: #BE2321;
 }
