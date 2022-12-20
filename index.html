@@ -1,18 +1,45 @@
 <!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset='utf-8'>
-    <!-- <meta http-equiv='X-UA-Compatible' content='IE=edge'> -->
-    <meta http-equiv="refresh" content="0; url=https://francescabambozzi.github.io/webapp/index.html">
-    <title>Index to host github pages</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
-</head>
-
-<body>
-
-</body>
-
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>App Title</title>
+    <style>
+      html,
+      body,
+      body > div,
+      #container,
+      #container-uiarea {
+        height: 100%;
+      }
+    </style>
+    <script
+      id="sap-ui-bootstrap"
+      src="resources/sap-ui-core.js"
+      data-sap-ui-theme="sap_horizon"
+      data-sap-ui-resourceroots='{
+            "movies": "./"
+        }'
+      data-sap-ui-compatVersion="edge"
+      data-sap-ui-async="true"
+      data-sap-ui-logLevel="debug"
+      data-sap-ui-frameOptions="trusted"
+    ></script>
+    <script
+      id="locate-reuse-libs"
+      src="./utils/locate-reuse-libs.js"
+      data-sap-ui-manifest-uri="./manifest.json"
+      data-sap-ui-componentName="movies"
+    ></script>
+  </head>
+  <body class="sapUiBody sapUiSizeCompact" id="content">
+    <div
+      data-sap-ui-component
+      data-name="movies"
+      data-id="container"
+      data-settings='{"id" : "movies"}'
+      data-handle-validation="true"
+    ></div>
+  </body>
 </html>
